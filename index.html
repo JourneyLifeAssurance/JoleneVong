@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Jolene Vong Digital Namecard</title>
+
+  <!-- BEBAS NEUE -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      width:100%;
+      overflow-x:hidden;
+      background:#ececec;
+      font-family:"Century Gothic", sans-serif;
+    }
+    
+
+    /* =========================
+       MOBILE ONLY LAYOUT
+    ========================== */
+
+    .mobile-container{
+      width:100%;
+      max-width:480px;
+      margin:auto;
+      background:#ececec;
+      min-height:100vh;
+      position:relative;
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================== */
+
+    .hero{
+    width:100%;
+    height:720px;
+    background:#e50000;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+}
+
+    /* NAME */
+
+    .name{
+      font-family:'Bebas Neue', sans-serif;
+      line-height:0.75;
+      color:white;
+      letter-spacing:0px;
+      
+      position:absolute;
+      top:30px;
+      
+      width:100%;
+      text-align:center;
+      
+      margin:0;
+      
+      animation:slideLeft 1s ease;
+    }
+    
+    .big{
+    font-size:100px;
+    }
+
+    .designation{
+      font-size:30px;
+      line-height:1;
+    }
+    
+/* PERSON IMAGE */
+
+.person{
+    position:absolute;
+    bottom:0;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    width:78%;
+    max-width:380px;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    animation:fadeIn 1.5s ease;
+
+    z-index:2;
+}
+
+.person img{
+  width:100%;
+  height:auto;
+  display:block;
+  
+  object-fit:contain;
+}
+
+.person{
+    position:absolute;
+    bottom:0;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    width:90%;      /* resize here */
+    max-width:380px;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    animation:fadeIn 1.5s ease;
+
+    z-index:2;
+}
+
+    /* =========================
+       CONTACT SECTION
+    ========================== */
+
+    .contact-section{
+      width:100%;
+      background:#ececec;
+      padding:40px 22px 60px;
+    }
+
+    .contact-btn{
+      width:100%;
+      height:78px;
+      background:#f00000;
+      border-radius:50px;
+      margin-bottom:28px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+
+      text-decoration:none;
+      color:black;
+
+      font-size:22px;
+      font-weight:bold;
+
+      box-shadow:0 6px 15px rgba(0,0,0,0.15);
+
+      transition:0.3s;
+    }
+
+    .contact-btn:active{
+      transform:scale(0.97);
+    }
+
+    /* SOCIAL BUTTONS */
+
+    .social-row{
+      display:flex;
+      gap:18px;
+      margin-bottom:45px;
+    }
+
+    .social-btn{
+      flex:1;
+      height:72px;
+
+      background:#f00000;
+      border-radius:50px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+
+      text-decoration:none;
+      color:black;
+
+      font-size:18px;
+      font-weight:bold;
+
+      box-shadow:0 6px 15px rgba(0,0,0,0.15);
+
+      transition:0.3s;
+    }
+
+    .social-btn:active{
+      transform:scale(0.97);
+    }
+
+    /* COMPANY */
+
+    .company{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:15px;
+    }
+
+    .company img{
+      width:75px;
+      height:auto;
+    }
+
+    .company h2{
+      font-family:'Bebas Neue', sans-serif;
+      font-size:30px;
+      line-height:0.9;
+      color:black;
+      letter-spacing:1px;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================== */
+
+    @keyframes slideLeft{
+      from{
+        opacity:0;
+        transform:translateX(-80px);
+      }
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- MOBILE CONTAINER -->
+
+  <div class="mobile-container">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <!-- NAME -->
+
+      <div class="name">
+        <span class="big">JOLENE VONG</span><br>
+        <span class="designation">Financial Service Provider</span>
+        
+      </div>
+     
+      <!-- IMAGE -->
+
+      <div class="person">
+        <img src="jolene.png" alt="JOLENE VONG">
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact-section">
+
+      <a href="tel:+60128871223" class="contact-btn">
+        <i class="fa-solid fa-phone"></i>
+        CALL
+      </a>
+
+      <a href="https://wa.me/60128871223" class="contact-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+        WHATSAPP
+      </a>
+
+      <a href="mailto:jolenevong89@gmail.com" class="contact-btn">
+        <i class="fa-solid fa-envelope"></i>
+        EMAIL
+      </a>
+
+      <!-- SOCIAL -->
+
+      <div class="social-row">
+
+     <a href="https://www.facebook.com/jolene.vong/" class="social-btn">
+          <i class="fa-brands fa-facebook"></i>
+          FACEBOOK
+        </a>
+
+        <a href="https://instagram.com/jolenevong" class="social-btn">
+          <i class="fa-brands fa-instagram"></i>
+          INSTAGRAM
+        </a>
+
+      </div>
+
+      <!-- COMPANY -->
+
+<div class="company">
+
+  <img src="logo.png" alt="Journey Life Assurance">
+
+  <div class="company-text">
+
+    <h2>
+      JOURNEY LIFE ASSURANCE
+    </h2>
+
+    <p class="small-company-name">
+      Prudential Assurance Malaysia Berhad
+    </p>
+
+  </div>
+
+</div>
+
+</body>
+</html>
